@@ -1,42 +1,92 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# robots.txt para https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/
+# Optimizado para 2025 – Máximo rendimiento SEO para IA, asistentes vocales y motores de búsqueda
+# Fecha de creación: 21 de febrero de 2025
+# Última actualización: 21 de febrero de 2025
+
+# DIRECTRICES GLOBALES (aplican a todos los robots)
 User-agent: *
+Allow: /
+Disallow: /private/
 Disallow: /admin/
-Disallow: /tmp/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: /*?*utm_source=*
+Disallow: /*?*ref=*
+Disallow: /*?*session_id=*
+Crawl-delay: 2
+
+# PERMITIR INDEXACIÓN DE RECURSOS CRÍTICOS Y MULTIMEDIA
+Allow: /Images/*.jpg
+Allow: /Images/*.webp
+Allow: /Videos/*.mp4
+Allow: /3D-Models/*.glb
+Allow: /Audio/*.mp3
+Allow: /Podcasts/*.mp3
+Allow: /styles-critical.css
+Allow: /manifest.json
+Allow: /service-worker.js
+Allow: /app-manifest.json
+Allow: /favicon_optimized.png
+
+# SITEMAPS (general, imágenes, vídeos, móvil y Google News)
+Sitemap: https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/sitemap.xml
+Sitemap: https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/sitemap-images.xml
+Sitemap: https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/sitemap-videos.xml
+Sitemap: https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/sitemap-mobile.xml
+Sitemap: https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/sitemap-news.xml
+Sitemap: https://clairvoyancemedium.github.io/Logro-recuperar-el-amor-de-su-vida-rapidamente.github.io/sitemap-audio.xml
+
+# DIRECTRICES ESPECÍFICAS PARA BOTS PRIORITARIOS (SEO, MÓVIL, MULTIMEDIA)
+User-agent: Googlebot
+User-agent: Googlebot-Mobile
+User-agent: Googlebot-News
+User-agent: Mediapartners-Google
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: /*?*utm_source=*
+Disallow: /*?*ref=*
+Disallow: /*?*session_id=*
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /Images/
 Disallow: /private/
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+User-agent: Googlebot-Video
+Allow: /Videos/
+Disallow: /private/
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+User-agent: Googlebot-Audio
+Allow: /Audio/
+Allow: /Podcasts/
+Disallow: /private/
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
 User-agent: Bingbot
+Crawl-delay: 2
+
+# SOPORTE PARA ASISTENTES VOCALES Y BÚSQUEDAS IA
+User-agent: SearchGPT
 Allow: /
+Disallow: /private/
+Disallow: /admin/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
+User-agent: Grok
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# BLOQUEO DE BOTS NO DESEADOS
+User-agent: Baiduspider
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+User-agent: Yandex
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
